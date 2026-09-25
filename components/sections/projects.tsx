@@ -1,0 +1,124 @@
+import { ExternalLink, Code2, FileText } from 'lucide-react'
+import { Reveal } from '@/components/reveal'
+import { SectionHeading } from '@/components/section-heading'
+import { ProjectVisual } from '@/components/project-visual'
+
+const projects = [
+  {
+    title: 'Egypt Food Price Analysis',
+    category: 'Data Analytics',
+    visual: 'market',
+    description:
+      'Full-cycle data analytics in Python. Built automated cleaning pipelines to normalize messy multi-year commodity indices, revealing price volatility and inflation patterns across staple foods in Egypt.',
+    tech: ['Python', 'Pandas', 'Matplotlib', 'Data Cleaning Pipelines'],
+  },
+  {
+    title: 'Sleep Factor Analytics: Variables Affecting Rest',
+    category: 'Data Analytics',
+    visual: 'heatmap',
+    description:
+      'Investigated variables influencing sleep duration and rest quality (screen time, caffeine intake, stress, physical activity) using multivariate EDA.',
+    tech: ['Python', 'Seaborn', 'Multivariate EDA', 'Statistical Modeling'],
+  },
+  {
+    title: 'Social Media Addiction Patterns',
+    category: 'Data Analytics',
+    visual: 'distribution',
+    description:
+      'Analyzed user behavior datasets to uncover screen-time addiction thresholds, emotional correlates, and digital usage loops.',
+    tech: ['Python', 'Statistical Analysis', 'Data Visualization'],
+  },
+  {
+    title: 'Null Pulse — Arduino-Based Intrusion Detection System',
+    category: 'Hardware & Security',
+    visual: 'circuit',
+    description:
+      'Engineered an IDS prototype to detect unauthorized access through optical covert channels on air-gapped devices with real-time alerting.',
+    tech: ['Arduino C++', 'LDR Sensors', 'Optical Covert Channel Defense'],
+  },
+  {
+    title: 'Smart Parking System',
+    category: 'Systems & Database',
+    visual: 'erd',
+    description:
+      'Co-designed an automated traffic and parking management solution; architected relational database structure using ERD principles for real-time allocation.',
+    tech: ['Database Architecture (ERD)', 'Hardware-Software Integration'],
+  },
+  {
+    title: 'Eco Mindset — RISE Global Finalist (Top 500 of 100,000+)',
+    category: 'Global Innovation',
+    visual: 'app',
+    description:
+      'Conceptualized a sustainability platform promoting environmental habits and recycling awareness; pitched internationally to reach top 500 status.',
+    tech: ['Project Architecture', 'Sustainability Ideation'],
+  },
+]
+
+export function Projects() {
+  return (
+    <section id="projects" className="section-pad">
+      <div className="mx-auto max-w-7xl px-6">
+        <SectionHeading
+          eyebrow="Projects Showcase"
+          title="Selected work across data, hardware & security"
+          subtitle="A curated portfolio of end-to-end projects — from automated data pipelines to physical intrusion-detection prototypes."
+        />
+
+        <div className="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {projects.map((p, i) => (
+            <Reveal key={p.title} delay={(i % 3) * 90} as="article" className="h-full">
+              <div className="glass glass-hover group flex h-full flex-col overflow-hidden rounded-2xl">
+                {/* Visual slot */}
+                <div className="relative aspect-[16/9] overflow-hidden border-b border-line">
+                  <ProjectVisual variant={p.visual} />
+                  <span className="absolute left-3 top-3 rounded-full border border-gold/30 bg-espresso/70 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-gold backdrop-blur">
+                    {p.category}
+                  </span>
+                </div>
+
+                {/* Body */}
+                <div className="flex flex-1 flex-col p-6">
+                  <h3 className="font-serif text-lg leading-snug text-cream">{p.title}</h3>
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-lavender">{p.description}</p>
+
+                  <ul className="mt-4 flex flex-wrap gap-2">
+                    {p.tech.map((t) => (
+                      <li
+                        key={t}
+                        className="rounded-md border border-line bg-espresso/40 px-2 py-1 font-mono text-[10px] text-lavender"
+                      >
+                        {t}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="mt-5 flex items-center gap-3 border-t border-line/60 pt-4">
+                    <a
+                      href="#"
+                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-rose transition-colors hover:text-cream"
+                    >
+                      <ExternalLink className="h-3.5 w-3.5" /> Live Demo
+                    </a>
+                    <span className="text-line">·</span>
+                    <a
+                      href="#"
+                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-lavender transition-colors hover:text-cream"
+                    >
+                      <Code2 className="h-3.5 w-3.5" /> Code
+                    </a>
+                    <a
+                      href="#"
+                      className="ml-auto inline-flex items-center gap-1.5 text-xs font-semibold text-gold transition-colors hover:text-cream"
+                    >
+                      <FileText className="h-3.5 w-3.5" /> Case Study
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
