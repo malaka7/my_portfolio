@@ -87,7 +87,7 @@ export function Hero() {
                 priority
                 sizes="(max-width: 768px) 320px, 416px"
                 className="object-cover"
-                style={{ objectPosition: 'center 50%' }}
+                style={{ objectPosition: 'center 60%' }}
               />
             </div>
             {/* orbiting micro-badges */}
