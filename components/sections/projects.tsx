@@ -52,7 +52,7 @@ const projects = [
   {
     title: 'Eco Mindset — RISE Global Finalist (Top 500 of 100,000+)',
     category: 'Global Innovation',
-    image: 'https://i.postimg.cc/nr64J5YZ/Screenshot-2026-09-26-153653.png',
+    image: 'https://i.postimg.cc/hv6t3R8m/Gemini-Generated-Image-npjsh9npjsh9npjs-(1).jpg',
     github: 'https://github.com/malaka7/Eco-Mindset', // رابط المشروع على جيت هب هنا
     description:
       'Conceptualized a sustainability platform promoting environmental habits and recycling awareness; pitched internationally to reach top 500 status.',
