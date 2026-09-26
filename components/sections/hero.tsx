@@ -17,8 +17,39 @@ export function Hero() {
 
           <Reveal delay={80}>
             <h1 className="mt-6 font-serif text-4xl font-semibold leading-[1.05] text-cream sm:text-6xl lg:text-7xl">
-              Malak El-Wafy
-              
+              M
+              {/* حرف a المداري المميز */}
+              <span className="relative inline-block">
+                <span className="relative z-10">a</span>
+                <svg
+                  className="pointer-events-none absolute -left-1.5 -top-1 h-[120%] w-[135%] text-gold select-none"
+                  viewBox="0 0 100 100"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  {/* مدار كوكبي بيضاوي ناعم ومائل */}
+                  <ellipse
+                    cx="50"
+                    cy="55"
+                    rx="44"
+                    ry="20"
+                    transform="rotate(-24 50 55)"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeDasharray="4 3"
+                    className="opacity-70"
+                  />
+                  {/* كوكب / عقدة بيانات صغيرة على المدار */}
+                  <circle
+                    cx="84"
+                    cy="40"
+                    r="3.5"
+                    fill="currentColor"
+                    className="drop-shadow-[0_0_6px_rgba(229,195,150,0.9)]"
+                  />
+                </svg>
+              </span>
+              lak El-Wafy
             </h1>
           </Reveal>
 
@@ -87,7 +118,7 @@ export function Hero() {
                 priority
                 sizes="(max-width: 768px) 320px, 416px"
                 className="object-cover"
-                style={{ objectPosition: 'center 60%' }}
+                style={{ objectPosition: 'center 75%' }}
               />
             </div>
             {/* orbiting micro-badges */}
