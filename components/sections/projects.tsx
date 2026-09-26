@@ -1,13 +1,13 @@
+import Image from 'next/image'
 import { ExternalLink, Code2, FileText } from 'lucide-react'
 import { Reveal } from '@/components/reveal'
 import { SectionHeading } from '@/components/section-heading'
-import { ProjectVisual } from '@/components/project-visual'
 
 const projects = [
   {
     title: 'Egypt Food Price Analysis',
     category: 'Data Analytics',
-    visual: 'market',
+    image: 'https://i.postimg.cc/DZx42Dhb/Code-Generated-Image.png', // غيري الرابط هنا
     description:
       'Full-cycle data analytics in Python. Built automated cleaning pipelines to normalize messy multi-year commodity indices, revealing price volatility and inflation patterns across staple foods in Egypt.',
     tech: ['Python', 'Pandas', 'Matplotlib', 'Data Cleaning Pipelines'],
@@ -15,7 +15,7 @@ const projects = [
   {
     title: 'Sleep Factor Analytics: Variables Affecting Rest',
     category: 'Data Analytics',
-    visual: 'heatmap',
+    image: 'https://i.postimg.cc/jSY2rKf1/Code-Generated-Image-(1).png', // غيري الرابط هنا
     description:
       'Investigated variables influencing sleep duration and rest quality (screen time, caffeine intake, stress, physical activity) using multivariate EDA.',
     tech: ['Python', 'Seaborn', 'Multivariate EDA', 'Statistical Modeling'],
@@ -23,7 +23,7 @@ const projects = [
   {
     title: 'Social Media Addiction Patterns',
     category: 'Data Analytics',
-    visual: 'distribution',
+    image: 'https://i.postimg.cc/DZRJJGWF/Code-Generated-Image-(2).png', // غيري الرابط هنا
     description:
       'Analyzed user behavior datasets to uncover screen-time addiction thresholds, emotional correlates, and digital usage loops.',
     tech: ['Python', 'Statistical Analysis', 'Data Visualization'],
@@ -31,7 +31,7 @@ const projects = [
   {
     title: 'Null Pulse — Arduino-Based Intrusion Detection System',
     category: 'Hardware & Security',
-    visual: 'circuit',
+    image: 'https://i.postimg.cc/SQ7kz8z4/Whats-App-Image-2026-09-26-at-3-30-42-PM.jpg', // غيري الرابط هنا
     description:
       'Engineered an IDS prototype to detect unauthorized access through optical covert channels on air-gapped devices with real-time alerting.',
     tech: ['Arduino C++', 'LDR Sensors', 'Optical Covert Channel Defense'],
@@ -39,7 +39,7 @@ const projects = [
   {
     title: 'Smart Parking System',
     category: 'Systems & Database',
-    visual: 'erd',
+    image: 'https://i.postimg.cc/PrVGmMfs/Whats-App-Image-2026-09-26-at-3-30-43-PM.jpg', // غيري الرابط هنا
     description:
       'Co-designed an automated traffic and parking management solution; architected relational database structure using ERD principles for real-time allocation.',
     tech: ['Database Architecture (ERD)', 'Hardware-Software Integration'],
@@ -47,7 +47,7 @@ const projects = [
   {
     title: 'Eco Mindset — RISE Global Finalist (Top 500 of 100,000+)',
     category: 'Global Innovation',
-    visual: 'app',
+    image: 'https://i.postimg.cc/nr64J5YZ/Screenshot-2026-09-26-153653.png', // غيري الرابط هنا
     description:
       'Conceptualized a sustainability platform promoting environmental habits and recycling awareness; pitched internationally to reach top 500 status.',
     tech: ['Project Architecture', 'Sustainability Ideation'],
@@ -70,8 +70,14 @@ export function Projects() {
               <div className="glass glass-hover group flex h-full flex-col overflow-hidden rounded-2xl">
                 {/* Visual slot */}
                 <div className="relative aspect-[16/9] overflow-hidden border-b border-line">
-                  <ProjectVisual variant={p.visual} />
-                  <span className="absolute left-3 top-3 rounded-full border border-gold/30 bg-espresso/70 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-gold backdrop-blur">
+                  <Image
+                    src={p.image}
+                    alt={p.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <span className="absolute left-3 top-3 z-10 rounded-full border border-gold/30 bg-espresso/70 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-gold backdrop-blur">
                     {p.category}
                   </span>
                 </div>
