@@ -11,7 +11,7 @@ export function Hero() {
           <Reveal>
             <span className="inline-flex items-center gap-2 rounded-full border border-gold/25 bg-surface px-3 py-1.5 font-mono text-xs text-gold backdrop-blur">
               <Sparkles className="h-3.5 w-3.5" />
-              Cybersecurity · Data Analytics · Innovation
+              Cybersecurity · Data Analytics · Innovationىىى
             </span>
           </Reveal>
 
