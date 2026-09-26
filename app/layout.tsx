@@ -1,8 +1,7 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Playfair_Display, Plus_Jakarta_Sans, JetBrains_Mono, Amiri } from 'next/font/google'
-import './globals.css'
-
+import '@/app/globals.css'
 const amiri = Amiri({
   subsets: ['arabic'],
   weight: ['400', '700'],
