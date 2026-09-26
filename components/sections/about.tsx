@@ -6,7 +6,7 @@ const cards = [
   {
     icon: UserRound,
     title: 'Who I Am',
-    body: 'Malak El-Wafy, Cybersecurity undergraduate at Helwan International Technological University (HITU) and a RISE Global Finalist — Top 500 out of 100,000+ applicants worldwide.',
+    body: 'Malak El-Wafy, Cybersecurity undergraduate at Helwan International Technological University (HITU). Specializing in exploratory data analysis and Python data pipelines, having analyzed 5+ real-world datasets across 10,000+ data records while engineering secure hardware-software logic',
   },
   {
     icon: Layers,
@@ -16,12 +16,12 @@ const cards = [
   {
     icon: Target,
     title: 'Target Audience',
-    body: 'Tech teams, research groups, security operations, and data analytics labs seeking rigorous problem solvers with strong communication.',
+    body: 'Tech teams, security operations, and data analytics labs seeking rigorous problem solvers with strong communication.',
   },
   {
     icon: Compass,
     title: 'Personal Philosophy',
-    body: 'Unlocking actionable intelligence from messy datasets while designing secure systems that protect physical and digital assets.',
+    body: 'For me, clean structure is non-negotiable. Whether architecting an anomaly-free dataset or hardening system logic, my obsession with meticulous order defines my work. I chose Data Analytics and Cybersecurity because they turn my need for absolute precision into impactful, secure solutions.',
   },
 ]
 
@@ -37,7 +37,7 @@ export function About() {
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeading
           eyebrow="About Me"
-          title="A rigorous mind for secure, data-driven systems"
+          title="Building cyber-resilient architectures through analytical precision."
         />
 
         <div className="mt-14 grid gap-6 lg:grid-cols-3">
