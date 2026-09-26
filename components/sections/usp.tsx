@@ -18,8 +18,8 @@ const items = [
   {
     icon: Globe2,
     no: '03',
-    title: 'Proven Global Innovation & Leadership',
-    body: 'Backed by RISE Global Finalist recognition, blending technical architecture with proven pitching and event coordination.',
+    title: 'Fast Time-to-Market, Zero Security Compromise',
+    body: "Bridging the gap between speed and integrity. I build, test, and ship end-to-end solutions in record time while maintaining ironclad standards for data accuracy and security.",
   },
 ]
 
