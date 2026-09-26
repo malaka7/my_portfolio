@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { ExternalLink, Code2, FileText } from 'lucide-react'
+import { ExternalLink, Code2 } from 'lucide-react'
 import { Reveal } from '@/components/reveal'
 import { SectionHeading } from '@/components/section-heading'
 
@@ -7,7 +7,8 @@ const projects = [
   {
     title: 'Egypt Food Price Analysis',
     category: 'Data Analytics',
-    image: 'https://i.postimg.cc/DZx42Dhb/Code-Generated-Image.png', // غيري الرابط هنا
+    image: 'https://i.postimg.cc/DZx42Dhb/Code-Generated-Image.png',
+    github: 'https://github.com/malaka7/-Egypt-Food-Price-Analysis', // رابط المشروع على جيت هب هنا
     description:
       'Full-cycle data analytics in Python. Built automated cleaning pipelines to normalize messy multi-year commodity indices, revealing price volatility and inflation patterns across staple foods in Egypt.',
     tech: ['Python', 'Pandas', 'Matplotlib', 'Data Cleaning Pipelines'],
@@ -15,7 +16,8 @@ const projects = [
   {
     title: 'Sleep Factor Analytics: Variables Affecting Rest',
     category: 'Data Analytics',
-    image: 'https://i.postimg.cc/jSY2rKf1/Code-Generated-Image-(1).png', // غيري الرابط هنا
+    image: 'https://i.postimg.cc/jSY2rKf1/Code-Generated-Image-(1).png',
+    github: 'https://github.com/malaka7/Sleep-Analytics', // رابط المشروع على جيت هب هنا
     description:
       'Investigated variables influencing sleep duration and rest quality (screen time, caffeine intake, stress, physical activity) using multivariate EDA.',
     tech: ['Python', 'Seaborn', 'Multivariate EDA', 'Statistical Modeling'],
@@ -23,7 +25,8 @@ const projects = [
   {
     title: 'Social Media Addiction Patterns',
     category: 'Data Analytics',
-    image: 'https://i.postimg.cc/DZRJJGWF/Code-Generated-Image-(2).png', // غيري الرابط هنا
+    image: 'https://i.postimg.cc/DZRJJGWF/Code-Generated-Image-(2).png',
+    github: 'https://github.com/malaka7/Social-Media-Addiction', // رابط المشروع على جيت هب هنا
     description:
       'Analyzed user behavior datasets to uncover screen-time addiction thresholds, emotional correlates, and digital usage loops.',
     tech: ['Python', 'Statistical Analysis', 'Data Visualization'],
@@ -31,7 +34,8 @@ const projects = [
   {
     title: 'Null Pulse — Arduino-Based Intrusion Detection System',
     category: 'Hardware & Security',
-    image: 'https://i.postimg.cc/SQ7kz8z4/Whats-App-Image-2026-09-26-at-3-30-42-PM.jpg', // غيري الرابط هنا
+    image: 'https://i.postimg.cc/SQ7kz8z4/Whats-App-Image-2026-09-26-at-3-30-42-PM.jpg',
+    github: 'https://github.com/malaka7/Null-pulse', // رابط المشروع على جيت هب هنا
     description:
       'Engineered an IDS prototype to detect unauthorized access through optical covert channels on air-gapped devices with real-time alerting.',
     tech: ['Arduino C++', 'LDR Sensors', 'Optical Covert Channel Defense'],
@@ -39,7 +43,8 @@ const projects = [
   {
     title: 'Smart Parking System',
     category: 'Systems & Database',
-    image: 'https://i.postimg.cc/PrVGmMfs/Whats-App-Image-2026-09-26-at-3-30-43-PM.jpg', // غيري الرابط هنا
+    image: 'https://i.postimg.cc/PrVGmMfs/Whats-App-Image-2026-09-26-at-3-30-43-PM.jpg',
+    github: 'https://github.com/malaka7/Parking-System', // رابط المشروع على جيت هب هنا
     description:
       'Co-designed an automated traffic and parking management solution; architected relational database structure using ERD principles for real-time allocation.',
     tech: ['Database Architecture (ERD)', 'Hardware-Software Integration'],
@@ -47,7 +52,8 @@ const projects = [
   {
     title: 'Eco Mindset — RISE Global Finalist (Top 500 of 100,000+)',
     category: 'Global Innovation',
-    image: 'https://i.postimg.cc/nr64J5YZ/Screenshot-2026-09-26-153653.png', // غيري الرابط هنا
+    image: 'https://i.postimg.cc/nr64J5YZ/Screenshot-2026-09-26-153653.png',
+    github: 'https://github.com/malaka7/Eco-Mindset', // رابط المشروع على جيت هب هنا
     description:
       'Conceptualized a sustainability platform promoting environmental habits and recycling awareness; pitched internationally to reach top 500 status.',
     tech: ['Project Architecture', 'Sustainability Ideation'],
@@ -99,24 +105,22 @@ export function Projects() {
                   </ul>
 
                   <div className="mt-5 flex items-center gap-3 border-t border-line/60 pt-4">
-                    <a
-                      href="#"
-                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-rose transition-colors hover:text-cream"
+                    <span
+                      className="inline-flex cursor-not-allowed items-center gap-1.5 text-xs font-semibold text-lavender/40 select-none"
+                      title="Live demo coming soon"
                     >
-                      <ExternalLink className="h-3.5 w-3.5" /> Live Demo
-                    </a>
+                      <ExternalLink className="h-3.5 w-3.5 opacity-50" /> Demo (Soon)
+                    </span>
+
                     <span className="text-line">·</span>
+
                     <a
-                      href="#"
+                      href={p.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 text-xs font-semibold text-lavender transition-colors hover:text-cream"
                     >
                       <Code2 className="h-3.5 w-3.5" /> Code
-                    </a>
-                    <a
-                      href="#"
-                      className="ml-auto inline-flex items-center gap-1.5 text-xs font-semibold text-gold transition-colors hover:text-cream"
-                    >
-                      <FileText className="h-3.5 w-3.5" /> Case Study
                     </a>
                   </div>
                 </div>
