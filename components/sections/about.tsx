@@ -41,35 +41,9 @@ export function About() {
           title="Building cyber-resilient architectures through analytical precision."
         />
 
-        {/* Layout: صورة طولية على اليسار + الكروت على اليمين */}
+        {/* Layout: الكروت على اليسار + الصورة على اليمين */}
         <div className="mt-14 grid gap-8 lg:grid-cols-12 lg:items-start">
-          {/* عمود الصورة */}
-          <div className="lg:col-span-5 lg:sticky lg:top-28">
-            <Reveal delay={60}>
-              <div className="glass glass-hover relative aspect-[4/5] w-full overflow-hidden rounded-3xl border border-line/80 shadow-2xl">
-                <Image
-                  src="https://i.postimg.cc/PqqR64YT/Whats-App-Image-2026-09-27-at-7-25-18-PM.jpg" // ضعي رابط صورتك هنا
-                  alt="Malak El-Wafy Portrait"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 40vw"
-                  className="object-cover transition-transform duration-700 hover:scale-105"
-                  style={{ objectPosition: 'center 30%' }}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-espresso/80 via-transparent to-transparent pointer-events-none" />
-                <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between rounded-2xl border border-gold/30 bg-espresso/80 p-4 backdrop-blur">
-                  <div>
-                    <span className="block font-serif text-base font-semibold text-cream">Malak El-Wafy</span>
-                    <span className="block font-mono text-xs text-gold">Cybersecurity &amp; Analytics</span>
-                  </div>
-                  <span className="rounded-full border border-rose/30 bg-rose/10 px-2.5 py-1 font-mono text-[10px] text-rose">
-                    HITU
-                  </span>
-                </div>
-              </div>
-            </Reveal>
-          </div>
-
-          {/* عمود الكروت */}
+          {/* عمود الكروت (ناحية الشمال) */}
           <div className="space-y-6 lg:col-span-7">
             <div className="grid gap-6 sm:grid-cols-2">
               {cards.map((c, i) => (
@@ -106,9 +80,35 @@ export function About() {
               </Reveal>
             </div>
           </div>
+
+          {/* عمود الصورة (ناحية اليمين) */}
+          <div className="lg:col-span-5 lg:sticky lg:top-28">
+            <Reveal delay={120}>
+              <div className="glass glass-hover relative aspect-[4/5] w-full overflow-hidden rounded-3xl border border-line/80 shadow-2xl">
+                <Image
+                  src="https://i.postimg.cc/PqqR64YT/Whats-App-Image-2026-09-27-at-7-25-18-PM.jpg"
+                  alt="Malak El-Wafy Portrait"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  className="object-cover transition-transform duration-700 hover:scale-105"
+                  style={{ objectPosition: 'center 30%' }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-espresso/80 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between rounded-2xl border border-gold/30 bg-espresso/80 p-4 backdrop-blur">
+                  <div>
+                    <span className="block font-serif text-base font-semibold text-cream">Malak El-Wafy</span>
+                    <span className="block font-mono text-xs text-gold">Cybersecurity &amp; Analytics</span>
+                  </div>
+                  <span className="rounded-full border border-rose/30 bg-rose/10 px-2.5 py-1 font-mono text-[10px] text-rose">
+                    HITU
+                  </span>
+                </div>
+              </div>
+            </Reveal>
+          </div>
         </div>
 
-        <Reveal delay={120} className="mt-14 text-center">
+        <Reveal delay={160} className="mt-14 text-center">
           <a
             href="#contact"
             className="group inline-flex items-center gap-2 rounded-full border border-rose/40 px-6 py-3 text-sm font-semibold text-rose transition-colors hover:bg-rose/10"
