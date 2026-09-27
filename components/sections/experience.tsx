@@ -15,7 +15,7 @@ const timeline = [
     role: 'Event Planning Member',
     org: 'Enactus HITU',
     period: '2025 – Present',
-    image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80', // ضعي رابط صورتك مع تيم Enactus هنا
+    image: 'https://i.postimg.cc/R01j8FbM/Whats-App-Image-2026-09-27-at-7-19-06-PM.jpg', // ضعي رابط صورتك مع تيم Enactus هنا
     body: 'Coordinated on-site logistics, handled attendee inquiries, and negotiated with suppliers and partners.',
     tag: 'Operations',
   },
